@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad54f74b-936c-48ac-836b-20a7614eb67f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/WebTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/pages/pageWebTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/module/testWebTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/WebTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/WebTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/pages/pageWebTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/pages/pageWebTables.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cypress/pages/testData.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/pages/testData.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -51,8 +58,16 @@
       <option name="presentableId" value="Default" />
       <updated>1644167910074</updated>
       <workItem from="1644167911211" duration="1372000" />
-      <workItem from="1644272051082" duration="711000" />
+      <workItem from="1644272051082" duration="3048000" />
     </task>
+    <task id="LOCAL-00001" summary="Lesson 15k">
+      <created>1644273009180</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644273009180</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lesson 15k" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 15k" />
   </component>
 </project>

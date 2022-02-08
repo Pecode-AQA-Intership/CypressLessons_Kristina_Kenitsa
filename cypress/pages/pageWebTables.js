@@ -33,5 +33,11 @@ class UserAddForm {
     usersTable() {
         return cy.get('.rt-tbody').find('[role=row]');
     }
+    searchField() {
+        return cy.get('#searchBox');
+    }
+    searchButton (){
+        return cy.get('.input-group-append')
+    }
 }
 export default UserAddForm;

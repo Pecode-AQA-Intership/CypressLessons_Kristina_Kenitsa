@@ -1,5 +1,5 @@
 import UserAddForm from '../pages/pageWebTables';
-import { USER_DATA, EDIT_USER_DATA } from '../pages/testData';
+import {USER_DATA, EDIT_USER_DATA, getCellTextAsArray} from '../pages/testData';
 const newUserForm = new UserAddForm;
 
 export function createNewUser() {
@@ -36,4 +36,42 @@ export function findUser (EDIT_USER_DATA) {
 export function deleteUser() {
     newUserForm.usersTable().contains(EDIT_USER_DATA.editName).parent().find('[id*="delete-record"]').click();
     newUserForm.usersTable().contains(EDIT_USER_DATA.editName).should('not.exist');
+}
+
+export function getTextAsArray(n) {
+    newUserForm.sortByName().eq(n).click();
+    let textArray = [];
+    return new Cypress.Promise(resolve => {
+        cy.get(`.rt-td:nth-child(${n + 1})`)
+            .each(($el) => {
+                textArray.push($el.text());
+            })
+            .then(() => resolve(textArray));
+    });
+}
+
+export function sortUsersForm() {
+    for (let n = 0; n < 6; n++) {
+        switch (n) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 5:
+                getTextAsArray(n).then(textArray => {
+                    let actual = textArray.slice();
+                    cy.wrap(actual).should("deep.eq", textArray.sort());
+                });
+                break;
+            case 4:
+                getTextAsArray(n).then(textArray => {
+                    let actual = textArray.slice();
+                    cy.wrap(actual).should("deep.eq", actual.sort(function (a, b) {
+                        return a - b
+                    }));
+                });
+                break;
+            default:
+        }
+    }
 }

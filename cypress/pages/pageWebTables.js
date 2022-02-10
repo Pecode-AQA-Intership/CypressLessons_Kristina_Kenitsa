@@ -39,5 +39,8 @@ class UserAddForm {
     searchButton (){
         return cy.get('.input-group-append')
     }
+    sortByName() {
+        return cy.get('.rt-resizable-header-content');
+    }
 }
 export default UserAddForm;

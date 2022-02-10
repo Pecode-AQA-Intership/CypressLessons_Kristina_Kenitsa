@@ -1,4 +1,5 @@
 class UserAddForm {
+
     addButton() {
         return cy.get('#addNewRecordButton')
     }
@@ -30,17 +31,22 @@ class UserAddForm {
     submitButton() {
         return cy.get('#submit')
     }
+
     usersTable() {
         return cy.get('.rt-tbody').find('[role=row]');
     }
+
     searchField() {
         return cy.get('#searchBox');
     }
-    searchButton (){
+
+    searchButton() {
         return cy.get('.input-group-append')
     }
+
     sortByName() {
         return cy.get('.rt-resizable-header-content');
     }
 }
+
 export default UserAddForm;

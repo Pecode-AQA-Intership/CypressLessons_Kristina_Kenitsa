@@ -1,7 +1,8 @@
-import { URL, EDIT_USER_DATA } from '../pages/testData.js';
-import { createNewUser, editUser, deleteUser, findUser,sortUsersForm } from '../module/testWebTable.js'
+import {URL, EDIT_USER_DATA} from '../pages/testData.js';
+import {createNewUser, editUser, deleteUser, findUser, sortUsersForm} from '../module/testWebTable.js'
 
 describe("User forms actions", () => {
+
     beforeEach(() => {
         cy.visit(URL.mainUrl + URL.webTablesUrl);
     })

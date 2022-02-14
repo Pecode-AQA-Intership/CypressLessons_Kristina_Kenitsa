@@ -1,5 +1,5 @@
-import LoginForm from '../pages/pageLogin.js';
-import {USER_DATA, URL} from '../pages/testData';
+import LoginForm from "../pages/pageLogin.js";
+import {USER_DATA, URL} from "../pages/testData";
 const loginForm = new LoginForm;
 
 describe("Log in", () => {

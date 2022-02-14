@@ -1,5 +1,5 @@
 import UserAddForm from '../pages/pageWebTables';
-import {USER_DATA, EDIT_USER_DATA, getCellTextAsArray} from '../pages/testData';
+import {USER_DATA, EDIT_USER_DATA} from '../pages/testData';
 
 const newUserForm = new UserAddForm;
 
@@ -15,7 +15,7 @@ export function createNewUser() {
 };
 
 export function editUser() {
-    newUserForm.usersTable().contains(USER_DATA.name).parent().find('[id*="edit-record"]').click();
+    newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='edit-record']").click();
     newUserForm.firstNameForm().clear().type(EDIT_USER_DATA.editName).should("be.visible");
     newUserForm.lastNameForm().clear().type(EDIT_USER_DATA.editLastName).should("be.visible");
     newUserForm.emailForm().clear().type(EDIT_USER_DATA.editEmail).should("be.visible");

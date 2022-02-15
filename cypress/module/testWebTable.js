@@ -25,18 +25,18 @@ export function editUser() {
     newUserForm.submitButton().should("be.visible").click();
 }
 
-export function findUser() {
+export function findUser(USER_DATA) {
     for (let property in USER_DATA) {
-        newUserForm.searchField().clear().type(EDIT_USER_DATA[property]);
+        newUserForm.searchField().clear().type(USER_DATA[property]);
         newUserForm.searchButton().click();
-        newUserForm.usersTable().contains(EDIT_USER_DATA[property]).should("be.exist");
+        newUserForm.usersTable().contains(USER_DATA[property]).should("be.exist");
     }
     newUserForm.searchField().clear();
 }
 
 export function deleteUser() {
-    newUserForm.usersTable().contains(EDIT_USER_DATA.editName).parent().find("[id*='delete-record']").click();
-    newUserForm.usersTable().contains(EDIT_USER_DATA.editName).should("not.exist");
+    newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='delete-record']").click();
+    newUserForm.usersTable().contains(USER_DATA.name).should("not.exist");
 }
 
 export function getTextAsArray(n) {

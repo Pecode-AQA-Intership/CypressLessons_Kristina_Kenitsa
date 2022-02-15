@@ -1,38 +1,40 @@
 class LoginForm {
+
     nameForm() {
-        return cy.get('#userName')
+        return cy.get('#userName');
     }
 
     emailForm() {
-        return cy.get('#userEmail')
+        return cy.get('#userEmail');
     }
 
     currentAddressForm() {
-        return cy.get('#currentAddress-wrapper  #currentAddress')
+        return cy.get('#currentAddress-wrapper  #currentAddress');
     }
 
     permanentAddressForm() {
-        return cy.get('#permanentAddress-wrapper  #permanentAddress')
+        return cy.get('#permanentAddress-wrapper  #permanentAddress');
     }
 
     nameResult() {
-        return cy.get('#name')
+        return cy.get('#name');
     }
 
     emailResult() {
-        return cy.get('#email')
+        return cy.get('#email');
     }
 
     currentAddressResult() {
-        return cy.get('#output  #currentAddress')
+        return cy.get('#output  #currentAddress');
     }
 
     permanentAddressResult() {
-        return cy.get('#output  #permanentAddress')
+        return cy.get('#output  #permanentAddress');
     }
 
     buttonSubmit() {
-        return cy.get('#submit')
+        return cy.get('#submit');
     }
 }
+
 export default LoginForm;

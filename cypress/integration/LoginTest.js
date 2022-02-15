@@ -1,14 +1,13 @@
 import LoginForm from '../pages/pageLogin.js';
-import {USER_DATA, URL} from '../pages/testData';
+import {USER_DATA, TEXT_BOX_URL} from '../pages/testData';
 const loginForm = new LoginForm;
-
 
 describe("Log in", () => {
     beforeEach(() => {
-        cy.visit(URL);
+        cy.visit('/' + TEXT_BOX_URL);
     })
 
-    it("Check that entering data will submit", () => {
+    it("Verify that entering data will submit", () => {
         loginForm.nameForm().type(USER_DATA.name).should("be.visible");
         loginForm.emailForm().type(USER_DATA.email).should("be.visible");
         loginForm.currentAddressForm().type(USER_DATA.currentAddress).should("be.visible");

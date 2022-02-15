@@ -1,4 +1,4 @@
-import {USER_DATA} from "../pages/testData";
+import {OTHER_USER_DATA, USER_DATA} from "../pages/testData";
 import NewStudentForm from "../pages/pagePracticeForm.js";
 const addNewStudent = new NewStudentForm;
 
@@ -7,20 +7,20 @@ export function createNewStudent() {
     addNewStudent.lastNameInput().type(USER_DATA.lastName);
     addNewStudent.emailInput().type(USER_DATA.email);
     addNewStudent.genderOption().check({force: true});
-    addNewStudent.mobileInput().type(USER_DATA.phoneNumber);
+    addNewStudent.mobileInput().type(OTHER_USER_DATA.phoneNumber);
     selectDate();
-    addNewStudent.subjectsInput().type(USER_DATA.subject);
+    addNewStudent.subjectsInput().type(OTHER_USER_DATA.subject);
     addNewStudent.hobbiesOption().check({force: true});
     loadPhoto();
-    addNewStudent.currentAddressInput().type(USER_DATA.currentAddress);
+    addNewStudent.currentAddressInput().type(OTHER_USER_DATA.currentAddress);
     selectStateAndCity();
     addNewStudent.submitButton().click();
 }
 
 export function selectDate() {
     addNewStudent.dateOfBirthInput().click();
-    addNewStudent.monthInput().select(USER_DATA.month);
-    addNewStudent.dayInput().contains(USER_DATA.day).eq(0).click();
+    addNewStudent.monthInput().select(OTHER_USER_DATA.month);
+    addNewStudent.dayInput().contains(OTHER_USER_DATA.day).eq(0).click();
 }
 
 export function loadPhoto() {

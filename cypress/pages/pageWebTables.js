@@ -1,11 +1,11 @@
 class UserAddForm {
 
     addButton() {
-        return cy.get('#addNewRecordButton')
+        return cy.get('#addNewRecordButton');
     }
 
     firstNameForm() {
-        return cy.get('#firstName')
+        return cy.get('#firstName');
     }
 
     lastNameForm() {

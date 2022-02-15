@@ -1,13 +1,12 @@
-const faker = require('faker');
+const faker = require("faker");
 
 export const URL = {
-    mainUrl: 'https://demoqa.com/',
-    textBoxUrl: 'text-box',
-    webTablesUrl: 'webtables'
+    textBoxUrl: "text-box",
+    webTablesUrl: "webtables"
 };
 
 export const USER_DATA = {
-    name: faker.name.findName(),
+    name: faker.name.firstName(),
     lastName: faker.name.lastName(),
     email: faker.internet.email(),
     currentAddress: faker.address.streetAddress(),

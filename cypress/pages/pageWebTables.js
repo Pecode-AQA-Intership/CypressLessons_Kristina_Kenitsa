@@ -1,35 +1,35 @@
 class UserAddForm {
 
     addButton() {
-        return cy.get('#addNewRecordButton')
+        return cy.get('#addNewRecordButton');
     }
 
     firstNameForm() {
-        return cy.get('#firstName')
+        return cy.get('#firstName');
     }
 
     lastNameForm() {
-        return cy.get('#lastName')
+        return cy.get('#lastName');
     }
 
     emailForm() {
-        return cy.get('#userEmail')
+        return cy.get('#userEmail');
     }
 
     ageForm() {
-        return cy.get('#age')
+        return cy.get('#age');
     }
 
     salaryForm() {
-        return cy.get('#salary')
+        return cy.get('#salary');
     }
 
     departmentForm() {
-        return cy.get('#department')
+        return cy.get('#department');
     }
 
     submitButton() {
-        return cy.get('#submit')
+        return cy.get('#submit');
     }
 
     usersTable() {
@@ -41,7 +41,7 @@ class UserAddForm {
     }
 
     searchButton() {
-        return cy.get('.input-group-append')
+        return cy.get('.input-group-append');
     }
 
     sortByName() {

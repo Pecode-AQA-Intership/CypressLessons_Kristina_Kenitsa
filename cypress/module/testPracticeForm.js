@@ -13,6 +13,8 @@ export function createNewStudent() {
     addNewStudent.hobbiesOption().check({force: true});
     loadPhoto();
     addNewStudent.currentAddressInput().type(USER_DATA.currentAddress);
+    selectStateAndCity();
+    addNewStudent.submitButton().click();
 }
 
 export function selectDate() {
@@ -29,4 +31,11 @@ export function loadPhoto() {
             mimeType: "image/png"
         });
     });
+}
+
+export function selectStateAndCity() {
+    addNewStudent.stateOptionInput().click();
+    addNewStudent.stateOptionInput().find('[tabindex="-1"]').contains("NCR").click();
+    addNewStudent.cityOptionInput().click();
+    addNewStudent.cityOptionInput().find('[tabindex="-1"]').contains("Delhi").click();
 }

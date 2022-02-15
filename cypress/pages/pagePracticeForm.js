@@ -19,20 +19,13 @@ class NewStudentForm {
     mobileInput() {
         return cy.get('#userNumber');
     }
+
     dayInput() {
         return cy.get('.react-datepicker__day');
     }
 
     monthInput() {
         return cy.get('.react-datepicker__month-select');
-    }
-
-    monthDropdown() {
-        return cy.get('.react-datepicker__month-select');
-    }
-
-    yearInput() {
-        return cy.get('.react-datepicker__year-select');
     }
 
     dateOfBirthInput() {
@@ -57,6 +50,10 @@ class NewStudentForm {
 
     cityOptionInput() {
         return cy.get('#city');
+    }
+
+    submitButton() {
+        return cy.get('#submit');
     }
 }
 

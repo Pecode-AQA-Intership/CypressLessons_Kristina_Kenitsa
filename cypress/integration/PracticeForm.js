@@ -1,13 +1,13 @@
 import {createNewStudent} from "../module/testPracticeForm";
-import {USER_DATA, URL} from "../pages/testData";
+import {URL} from "../pages/testData";
 
 describe("Add new student", () => {
 
     beforeEach(() => {
-        cy.visit(URL.mainUrl + URL.practiceFormUrl);
+        cy.visit('/' + URL.practiceFormUrl);
     })
 
-    it("Check that entering data will submit", () => {
-      createNewStudent();
+    it("Verify that a new student will be added with valid data ", () => {
+        createNewStudent();
     });
 })

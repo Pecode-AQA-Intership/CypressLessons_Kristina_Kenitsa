@@ -7,7 +7,7 @@ describe("User forms actions", () => {
         cy.visit(URL.mainUrl + URL.webTablesUrl);
     })
 
-    it("Verify that user can be added,edit user data, find the created user,sort user by different parameters and delete user.", () => {
+    it("Check that user can be added,edit user data, find the created user,sort user by different parameters and delete user.", () => {
         createNewUser();
         editUser();
         findUser(EDIT_USER_DATA);

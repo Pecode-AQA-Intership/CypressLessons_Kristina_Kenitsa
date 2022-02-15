@@ -12,7 +12,7 @@ export function createNewUser() {
     newUserForm.salaryForm().type(USER_DATA.salary).should("be.visible");
     newUserForm.departmentForm().type(USER_DATA.department).should("be.visible");
     newUserForm.submitButton().should("be.visible").click();
-};
+}
 
 export function editUser() {
     newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='edit-record']").click();
@@ -23,7 +23,7 @@ export function editUser() {
     newUserForm.salaryForm().clear().type(EDIT_USER_DATA.editSalary).should("be.visible");
     newUserForm.departmentForm().clear().type(EDIT_USER_DATA.editDepartment).should("be.visible");
     newUserForm.submitButton().should("be.visible").click();
-};
+}
 
 export function findUser(EDIT_USER_DATA) {
     for (let property in EDIT_USER_DATA) {

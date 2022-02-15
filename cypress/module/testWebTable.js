@@ -14,14 +14,22 @@ export function createNewUser() {
     newUserForm.submitButton().should("be.visible").click();
 }
 
+export function checkThatNewUserAdded() {
+    newUserForm.usersTable().contains(USER_DATA.name);
+    newUserForm.usersTable().contains(USER_DATA.name);
+    newUserForm.usersTable().contains(USER_DATA.name);
+    newUserForm.usersTable().contains(USER_DATA.name);
+
+}
 export function editUser() {
+    cy.wait(5000);
     newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='edit-record']").click();
-    newUserForm.firstNameForm().clear().type(EDIT_USER_DATA.editName).should("be.visible");
+    newUserForm.departmentForm().clear().type(EDIT_USER_DATA.editDepartment).should("be.visible");
     newUserForm.lastNameForm().clear().type(EDIT_USER_DATA.editLastName).should("be.visible");
     newUserForm.emailForm().clear().type(EDIT_USER_DATA.editEmail).should("be.visible");
     newUserForm.ageForm().clear().type(EDIT_USER_DATA.editAge).should("be.visible");
     newUserForm.salaryForm().clear().type(EDIT_USER_DATA.editSalary).should("be.visible");
-    newUserForm.departmentForm().clear().type(EDIT_USER_DATA.editDepartment).should("be.visible");
+    newUserForm.firstNameForm().clear().type(EDIT_USER_DATA.editName).should("be.visible");
     newUserForm.submitButton().should("be.visible").click();
 }
 
@@ -34,8 +42,11 @@ export function findUser(USER_DATA) {
     newUserForm.searchField().clear();
 }
 
-export function deleteUser() {
+export function clickOnDeleteButton() {
     newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='delete-record']").click();
+}
+
+export function deleteUser(){
     newUserForm.usersTable().contains(USER_DATA.name).should("not.exist");
 }
 

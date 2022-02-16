@@ -22,9 +22,11 @@ export const OTHER_USER_DATA = {
     permanentAddress: faker.address.secondaryAddress(),
     day: faker.random.number({min: 1, max: 28}),
     month: faker.date.month(),
-    year: faker.random.number({min: 1960, max: 2005}),
-    subject: "Accounting",
+    year: faker.random.number({min: 2014, max: 2050}),
+    subject: ["Accounting", "Math", "English", "Economics"]
 }
+
+export let randomSubject = Math.floor(Math.random() * OTHER_USER_DATA["subject"].length);
 
 export const EDIT_USER_DATA = {
     editName: faker.name.firstName(),

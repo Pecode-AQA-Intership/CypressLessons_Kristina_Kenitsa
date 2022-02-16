@@ -1,4 +1,4 @@
-import {createNewStudent} from "../module/testPracticeForm";
+import {createNewStudent, checkThatParametersAdded} from "../module/testPracticeForm";
 import {URL} from "../pages/testData";
 
 describe("Add new student", () => {
@@ -9,5 +9,10 @@ describe("Add new student", () => {
 
     it("Verify that a new student will be added with valid data ", () => {
         createNewStudent();
+    });
+
+    it("Verify that all parameters of created student will be added to the table", () => {
+        createNewStudent();
+        checkThatParametersAdded();
     });
 })

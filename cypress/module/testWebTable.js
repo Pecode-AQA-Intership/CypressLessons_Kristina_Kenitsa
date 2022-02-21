@@ -16,9 +16,11 @@ export function createNewUser() {
 
 export function checkThatNewUserAdded() {
     newUserForm.usersTable().contains(USER_DATA.name);
-    newUserForm.usersTable().contains(USER_DATA.name);
-    newUserForm.usersTable().contains(USER_DATA.name);
-    newUserForm.usersTable().contains(USER_DATA.name);
+    newUserForm.usersTable().contains(USER_DATA.lastName);
+    newUserForm.usersTable().contains(USER_DATA.email);
+    newUserForm.usersTable().contains(USER_DATA.age);
+    newUserForm.usersTable().contains(USER_DATA.salary);
+    newUserForm.usersTable().contains(USER_DATA.department);
 
 }
 export function editUser() {

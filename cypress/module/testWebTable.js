@@ -24,8 +24,7 @@ export function checkThatNewUserAdded() {
 
 }
 export function editUser() {
-    cy.wait(5000);
-    newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='edit-record']").click();
+    newUserForm.usersTable().contains(USER_DATA.name).parent().find("[id*='edit-record']").eq(0).click();
     newUserForm.departmentForm().clear().type(EDIT_USER_DATA.editDepartment).should("be.visible");
     newUserForm.lastNameForm().clear().type(EDIT_USER_DATA.editLastName).should("be.visible");
     newUserForm.emailForm().clear().type(EDIT_USER_DATA.editEmail).should("be.visible");

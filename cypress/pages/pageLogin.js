@@ -1,4 +1,4 @@
-class LoginForm {
+export default class LoginForm {
 
     nameForm() {
         return cy.get('#userName')
@@ -36,5 +36,3 @@ class LoginForm {
         return cy.get('#submit')
     }
 }
-
-export default LoginForm;

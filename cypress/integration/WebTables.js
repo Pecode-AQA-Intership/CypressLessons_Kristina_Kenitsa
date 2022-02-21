@@ -7,12 +7,12 @@ describe("User forms actions", () => {
         cy.visit('/' + URL.webTablesUrl);
     })
 
-    it.only("Verify that user can be added", () => {
+    it("Verify that user can be added", () => {
         createNewUser();
         checkThatNewUserAdded();
     });
 
-    it("Verify that can edit user data.", () => {
+    it.only("Verify that can edit user data.", () => {
         createNewUser();
         editUser();
     });
